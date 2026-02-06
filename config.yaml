@@ -1,0 +1,55 @@
+# Zhang Server Configuration
+# This file configures the zhang accounting server
+# Note: Only Beancount format (.bean, .bc, .beancount) is supported
+
+# Data Configuration
+data:
+  # Path to the ledger directory
+  path: "/install/zhang/beanweb/beandata"
+#   path: "/data/bean/data"
+  # Main ledger file name (must be a Beancount file)
+  main_file: "main_zhang.bean"
+  new_transaction_file: "/install/zhang/beanweb/beandata/bot/zhang.bean"
+
+# Server Configuration
+server:
+  # Listen address
+  host: "0.0.0.0"
+  # Listen port
+  port: 8081
+
+# Feature Toggles
+features:
+  # Enable budget management module
+  budget_enable: false
+  # Enable time extraction from Beancount metadata
+  time_extraction: true
+
+# Pagination Settings
+pagination:
+  # Number of records per page
+  records_per_page: 50
+
+# Journal Display Settings
+journal:
+  # Expand transaction details inline (show Postings)
+  expand_detail: true
+  # Transaction edit mode: "text" | "form"
+  edit_mode: "form"
+  # Default page: "dashboard" | "journals"
+  default_page: "journals"
+
+# Time Range Settings
+time_range:
+  # Default time range: month, quarter, year, all, custom
+  default_range: "year"
+  # Show current year to date
+  show_current_year_to_date: false
+  # Fiscal year start month (1-12)
+  fiscal_year_start: 1
+
+# Logging Configuration
+logging:
+  # Log level: debug, info, warn, error
+  level: "debug"
+

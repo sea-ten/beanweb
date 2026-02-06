@@ -1,0 +1,12 @@
+[package]
+name = "beanweb-config"
+version = "0.1.0"
+edition = "2021"
+description = "Configuration management for beanweb"
+
+[dependencies]
+serde = { workspace = true }
+serde_yaml = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["fs"] }
+anyhow = { workspace = true }

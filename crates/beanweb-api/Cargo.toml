@@ -1,0 +1,24 @@
+[package]
+name = "beanweb-api"
+version = "0.1.0"
+edition = "2021"
+description = "HTTP API server with HTMX support"
+
+[dependencies]
+beanweb-core = { path = "../beanweb-core" }
+beanweb-config = { path = "../beanweb-config" }
+axum = { version = "0.7", features = ["macros"] }
+tokio = { workspace = true }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+log = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+urlencoding = "2.1"
+chrono = { version = "0.4", features = ["std"] }
+regex = "1"
+glob = "0.3"
+bytes = "1"
+hyper = { version = "0.14", features = ["full"] }
